@@ -1,0 +1,20 @@
+<section>
+  <h2>Formulario</h2>
+  <form action="/productos" method="post">
+    <input type="text" name="nombre" placeholder="Nombre" />
+    <br />
+    <input type="text" name="descripcion" placeholder="descripcion" />
+    <br />
+    <input type="number" name="price" placeholder="price" />
+    <br />
+    <input type="submit" value="Enviar" />
+  </form>
+  <!-- lista  de productos -->
+  <ul>
+    <% if(productos.length > 0){ %> <% productos.forEach(prod => { %>
+    <li><%= prod.nombre %> - <%= prod.descripcion %> - <%= prod.price %></li>
+    <% })%> <%}else{%>
+    <h2>No hay productos</h2>
+    <%}%>
+  </ul>
+</section>

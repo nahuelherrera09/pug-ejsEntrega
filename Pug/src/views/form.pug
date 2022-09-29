@@ -1,0 +1,9 @@
+extends layout
+block content  
+          form(action="/products", method="post") 
+              input(type="text" name="itle") 
+              input(type="text" name="preio")  
+              input(type="text" name="stock") 
+
+              button Enviar
+              a(href="/products") Products

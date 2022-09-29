@@ -1,0 +1,15 @@
+extends layout
+block tabla 
+        table 
+        tr 
+        th Title 
+        th Price
+        th Stock
+        tr  
+        each product in products
+            tr
+            th #{product.title}
+            th #{product.precio}
+            th #{product.stock}
+            tr 
+        a(href="/") Form        
